@@ -25,6 +25,7 @@ header{
 .header-container{
     display: flex;
     align-items: center;
+    border: 1px #ECECEC;
 }
 .header-logo img{
     width: 145px;
@@ -211,5 +212,50 @@ footer{
     font-size: 14px;
     color: #FFFFFF99;
 }
+/*Portfolio*/
+.portfolio-buttons{
+    display: flex;
+    margin: 94px 0 50px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.portfolio-button{
+    background: #F5F4FA;
+    padding: 6px 25px;
+    border:1px solid #F5F4FA;
+    margin-top: 30px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #212121;
+}
 
+.portfolio-cards{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.portfolio-card{
+    background: #FFFFFF;
+    flex: 1 1 30%;
+}
+.portfolio-card img{
+    height: 294px;
+    width:100%;
+    object-fit: cover;
+}
+.portfolio-description{
+    padding: 20px 24px;
+}
+.portfolio-title{
+    font-weight: 700;
+    font-size: 18px;
+}
+.portfolio-class{
+color: #757575;
+margin:10px 0 0 0;
+font-size: 16px;
+font-weight: 400;
+}
 
