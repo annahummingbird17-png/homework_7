@@ -55,7 +55,7 @@ html,body{
     margin: 0 auto;
 }
 .wrapper{
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -257,6 +257,7 @@ footer{
 .tel{
     font-size: 14px;
     color: #FFFFFF99;
+    text-decoration: none;
 }
 /*Portfolio*/
 .portfolio-container{
@@ -266,18 +267,21 @@ footer{
     display: flex;
     margin: 94px 0 50px 0;
     justify-content: center;
-    align-items: center;
     gap: 8px;
 }
 .portfolio-button{
     background: var(--light-white-color);
-    padding: 6px 25px;
+    padding: 9px 25px;
     border:1px solid var(--light-white-color);
-    margin-top: 30px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;
     color: var(--light-black-color);
+}
+
+.portfolio-button:hover{
+    background: var(--light-blue-color);
+    color: var(--brand-color);
 }
 
 .portfolio-cards{
@@ -285,15 +289,42 @@ footer{
     gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 94px;
+    position: relative
 }
 .portfolio-card{
     background: var(--brand-color);
     flex: 1 1 30%;
+    position: relative;
+    z-index: 1;
+}
+.portfolio-image{
+    width: 100%;
+    height: 294px;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+
 }
 .portfolio-card img{
     height: 294px;
     width:100%;
     object-fit: cover;
+}
+.portfolio-image:hover>.portfolio-overlay{
+    display: block;
+}
+.portfolio-overlay{
+    background: rgba(33, 150, 243, 0.9);
+    height: 294px;
+    font-weight: 400;
+    color:var(--brand-color);
+    font-size: 18px;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    inset:0;
 }
 .portfolio-description{
     padding: 20px 24px;
